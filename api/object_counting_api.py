@@ -22,12 +22,12 @@ def upload_data(conn, img_name):
 
 def calling_sms(img_name):
 
-    account_sid = 'ACfa44115d0ff5f4602437ca7a4130b110'
-    auth_token = 'e054d9870d54ba655fa932e3ffabb83d'
+    account_sid = 'YOUR SID'
+    auth_token = 'YOUR TOKEN'
     client = Client(account_sid, auth_token)
 
     # MOBILE NUMBERS -- ADD MORE NUMBER HERE......
-    mobile_number = {"Pratik":'+917000681073'}
+    mobile_number = {"Pratik":'+917000xxxxx'}
 
     print("--------------------------------------Check Your Whatsapp-----------------------------------------")
     for name, num in mobile_number.items():
@@ -123,8 +123,8 @@ def targeted_object_counting(detection_graph, category_index, is_color_recogniti
 
                     # TO CREATE CONNECTION WITH S3------------------------------------------------------------------------------------
                     if check > lastchk_CONN:
-                    	S3_ACCESS_KEY = "AKIAJV2SP7VQE44ZGJVA"
-                    	S3_SECRET_KEY = "9puNaI+SsEom0YXKx2h4jezOm3FKSod0+5SosrrR"
+                    	S3_ACCESS_KEY = "YOUR AWS S3 ACCESS KEY"
+                    	S3_SECRET_KEY = "YOUR AWS S3 SECRET KEY"
                     	conn = tinys3.Connection(S3_ACCESS_KEY,S3_SECRET_KEY, tls=True, endpoint='s3-ap-southeast-1.amazonaws.com')
                     	print("--------------------------------------Connected to SERVER-----------------------------------------")
 
